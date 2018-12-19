@@ -10,19 +10,24 @@ capitalsItems = list(capitals.items())
 
 # Generate 35 quiz files.
 for quizNum in range(35):
+    # TODO: Создать файлы билетов и ключей ответов
     # Create the quiz and answer key files.
     quizFile = open('capitalsquiz%s.txt' % (quizNum + 1), 'w')
     answerKeyFile = open('capitalsquiz_answers%s.txt' % (quizNum + 1), 'w')
 
+    # TODO: Записать заголовок билета
     # Write out the header for the quiz.
     quizFile.write('Name:\n\nDate:\n\nPeriod:\n\n')
     quizFile.write((' ' * 20) + 'State Capitals Quiz (Form %s)' % (quizNum + 1))
     quizFile.write('\n\n')
 
+    # TODO: Перемещать порядок следования штатов
     # Shuffle the order of the states.
     states = list(capitals.keys()) # get all states in a list
     random.shuffle(states) # randomize the order of the states
 
+    # TODO: Организовать цикл по всем 50 штатам,
+    # создавая вопрос для каждого из них.
     # Loop through all 50 states, making a question for each.
     for questionNum in range(50):
 
